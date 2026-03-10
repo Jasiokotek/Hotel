@@ -18,7 +18,7 @@ import com.example.rezerwacja_pokoi.SummaryActivity;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_NAME = "EXTRA_NAME";
-    public static final String EXTRA_ROOMS = "EXTRA_ROOMS";
+    public static final String EXTRA_DAYS = "EXTRA_DAYS";
     public static final String EXTRA_BREAKFAST = "EXTRA_BREAKFAST";
 
     private EditText editTextName;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, SummaryActivity.class);
         intent.putExtra(EXTRA_NAME, name);
-        intent.putExtra(EXTRA_ROOMS, rooms);
+        intent.putExtra(EXTRA_DAYS, rooms);
         intent.putExtra(EXTRA_BREAKFAST, breakfast);
         startActivity(intent);
     }

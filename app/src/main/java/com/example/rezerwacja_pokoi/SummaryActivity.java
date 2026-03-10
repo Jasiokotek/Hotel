@@ -30,15 +30,18 @@ public class SummaryActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         String name = intent.getStringExtra(MainActivity.EXTRA_NAME);
-        int rooms = intent.getIntExtra(MainActivity.EXTRA_ROOMS, 0);
+        int days = intent.getIntExtra(MainActivity.EXTRA_DAYS, 0);
         boolean breakfast = intent.getBooleanExtra(MainActivity.EXTRA_BREAKFAST, false);
 
         String breakfastText = breakfast ? "Tak" : "Nie";
-
+        int cena = days * 250;
+        if(breakfast) cena += days * 50;
+        
         String summary = "Rezerwacja:\n\n"
                 + "Imię i nazwisko: " + name + "\n"
-                + "Ilość pokoi: " + rooms + "\n"
-                + "Śniadanie: " + breakfastText;
+                + "Ilość pokoi: " + days + "\n"
+                + "Śniadanie: " + breakfastText + "\n"
+                + "Cena: " + cena + "zł";
 
         textViewSummary.setText(summary);
     }
