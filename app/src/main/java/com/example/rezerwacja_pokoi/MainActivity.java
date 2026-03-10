@@ -63,5 +63,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_NAME, name);
         intent.putExtra(EXTRA_ROOMS, rooms);
         intent.putExtra(EXTRA_BREAKFAST, breakfast);
+        startActivity(intent);
     }
 }
