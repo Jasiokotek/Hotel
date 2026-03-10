@@ -39,7 +39,7 @@ public class SummaryActivity extends AppCompatActivity {
         
         String summary = "Rezerwacja:\n\n"
                 + "Imię i nazwisko: " + name + "\n"
-                + "Ilość pokoi: " + days + "\n"
+                + "Ilość dni: " + days + "\n"
                 + "Śniadanie: " + breakfastText + "\n"
                 + "Cena: " + cena + "zł";
 
